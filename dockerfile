@@ -1,11 +1,14 @@
 
-FROM ruby:3.1
+FROM ruby:3.1-slim
 
 
 WORKDIR /app
 
 
-RUN gem install sinatra
+COPY Gemfile Gemfile.lock ./
+
+
+RUN bundle install
 
 
 COPY . .
@@ -14,4 +17,4 @@ COPY . .
 EXPOSE 4567
 
 
-CMD ["ruby", "app.rb"]
+CMD ["ruby", "app.rb", "-p", "4567"]

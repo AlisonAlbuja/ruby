@@ -2,7 +2,8 @@
 
 require 'sinatra'
 
-# Configuración de la ruta principal
+set :port, ENV['PORT'] || 4567
+
 get '/' do
-  '¡Hola Alison desde Ruby!'
+  'Hello, Alison Ruby'
 end
