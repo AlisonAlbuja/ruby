@@ -5,10 +5,13 @@ FROM ruby:3.1-slim
 WORKDIR /app
 
 
-COPY Gemfile Gemfile.lock ./
+COPY Gemfile ./
 
 
 RUN bundle install
+
+
+RUN gem install rackup
 
 
 COPY . .
