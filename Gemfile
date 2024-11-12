@@ -1,2 +1,4 @@
+source "https://rubygems.org"
+
 gem 'sinatra'
-gem 'webrick'  # Añade esta línea
+gem 'webrick'  # Si estás usando Sinatra con WEBrick
